@@ -15,18 +15,3 @@ $(document).mouseup(function (e){
         LayerPopup.hide();
     }
 });
-
-// 경기도청
-var tempWidth = $(".imgArea").css("width");
-var tempSplitWidth = tempWidth.split("px");
-var imgWidth = tempSplitWidth[0];
-
-$('.origImg').resizable({
-    handles: "e",
-    minWidth: 38,
-    maxWidth: imgWidth-40
-});
-
-var handles = $(".handle").resizable("option", "handles");
-$(".handle").resizable("option", "handles", "e");
-$(".origImg").css("width","854px");
