@@ -1,0 +1,123 @@
+/* 공통 */
+.inner section { padding: 40px; }
+
+.sub h2 { font-size: 52px; font-weight: 700; margin-bottom: 50px; }
+.sub h2:after { display: block; width: 20px; height: 5px; background: #333; content: ''; }
+
+/* 사이드 내비 */
+.side_nav { position: absolute; top: 50%; right: 30px; z-index: 1; }
+.side_nav ul { list-style: none; width: 40px; height: auto; padding: 15px 0; border: 2px solid #fff; border-radius: 20px; }
+.side_nav ul li { margin-bottom: 15px; }
+.side_nav ul li:last-child { margin-bottom: 0px; }
+.side_nav li a { display: block; width: 10px; height: 10px; margin: 0 auto; border: 2px solid #fff; background: #333; border-radius: 5px; }
+
+/* 1페이지 VISUAL TITLE */
+#visualPage { position: relative; width: 100%; height: 100%; background-color: #333; }
+#visualPage .title_text { position: absolute; top: 15%; left: 50%; transform: translate(-50%, 50%) }
+#visualPage .title_text { color: #fff; font-weight: 900; font-size: 90px; line-height: 1.2em; }
+#visualPage .title_text .reverse { color: #333; font-weight: 900; -webkit-text-stroke: 1px #fff; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px #fff; }
+
+#visualPage .scroll { position: absolute; bottom: 10px; left: 50%; font-size: 16px; color: #fff; }
+#visualPage .scroll_box { position: relative; width: 26px; height: 40px; margin: 10px auto; border: 2px solid #fff; border-radius: 13px; }
+#visualPage .scroll_ball { position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; background: #fff; border-radius: 10px; }
+#visualPage .scroll_ball {
+    animation-duration: 1.5s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+    from {
+        top: 2px;
+    }
+    
+    50% {
+        top: 16px;
+      }
+
+    to {
+        top: 16px;
+    }
+}
+
+/* 2페이지 ABOUT PAGE */
+#aboutPage .leftBox,
+#aboutPage .rightBox { width: 50%; }
+
+#about .imagebox { width: 260px; height: 260px; border-radius: 130px; background-color: #333; }
+#about h3 { margin-top: 30px; font-size: 32px; font-weight: 700; line-height: 1.2em; }
+#about p { margin-bottom: 10px; }
+
+#history .historyList li { margin-bottom: 20px; }
+#history .historyList dl dt { display: inline-block; width: 150px; font-size: 14px; color: #999; }
+#history .historyList dl dd { display: inline-block; }
+
+#skills:after { display: block; clear: both; content: ''; }
+#skills .skillList:after { display: block; clear: both; content: ''; }
+#skills .skillList li { margin-bottom: 20px; }
+#skills .skillList dl dt { font-size: 22px; font-weight: 700; }
+#skills .skillList dl dd { color: #999; font-size: 15px; }
+#skills .skillList .bar_bg { position: relative; width: 90%; height: 6px; margin: 20px 0; border-radius: 3px; background-color: #e7e7e7; }
+#skills .skillList .bar_bg .bar_per { height: 6px; border-radius: 3px; background-color: #333; }
+#skills .skillList .bar_bg .bar_text{ position: absolute; top: -16px; width: 32px; height: 32px; border-radius: 16px; background-color: #333; color: #fff; text-align: center; line-height: 32px; font-size: 10px; }
+
+/* 3페이지 PORTFOLIO */
+#portfolioPage { height: 100%; }
+
+.galleryList:after { display: block; clear: both; content: ''; }
+.galleryList li { margin-right: 2%; margin-bottom: 50px; width: 32%; float: left; }
+.galleryList li:nth-child(3n) { margin-right: 0; }
+.galleryList li .ga_img img { width: 100%; height: 240px; border: 1px solid #ececec; }
+.galleryList .ga_title { font-size: 22px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.galleryList .ga_option .desc { margin-bottom: 10px; color: #ccc; font-size: 13px; }
+.galleryList .ga_option a { color: #acacac; font-size: 15px; }
+
+@media (max-width: 1200px) {
+    #aboutPage .leftBox,
+    #aboutPage .rightBox { width: 100%; }
+
+    #skills .skillList .bar_bg { width: 100%; }
+
+    #visualPage .title_text { font-size: 80px; }
+}
+@media (max-width: 720px) {
+    .galleryList li { margin-right: 0; width: 100%; clear: both; }
+    .galleryList li .ga_img img { height: 300px; }
+}
+
+/* 경기도청 */
+.mainField {
+    position: absolute;
+    margin: 5px 0px;
+}
+
+.mainField > .imgArea {
+    width: 894px;
+    height: 500px;
+}
+
+.mainField > .origImg {
+    background: url('../img/gg/origImg.png') no-repeat;
+    position: absolute;
+}
+.mainField > .coverImg {
+    background: url('../img/gg/coverImg.png') no-repeat;
+}
+
+.ui-resizable-handle {
+    width: 5px;
+    height: 100%;
+    background: #000;
+}
+.ui-resizable-handle
+{
+    background: url('../img/gg/bar.png') no-repeat;
+    width: 79px;
+    margin-right: -33px;
+}
+.black_bar{
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 200;
+}
