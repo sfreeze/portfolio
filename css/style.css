@@ -5,11 +5,14 @@
 .sub h2:after { display: block; width: 20px; height: 5px; background: #333; content: ''; }
 
 /* 사이드 내비 */
-.side_nav { position: absolute; top: 50%; right: 30px; z-index: 1; }
-.side_nav ul { list-style: none; width: 40px; height: auto; padding: 15px 0; border: 2px solid #fff; border-radius: 20px; }
+.side_nav { position: fixed; top: 50%; right: 30px; z-index: 1; }
+.side_nav ul { list-style: none; width: 40px; height: auto; padding: 15px 0; border: 2px solid #fff; background: #fff; border-radius: 20px; }
 .side_nav ul li { margin-bottom: 15px; }
 .side_nav ul li:last-child { margin-bottom: 0px; }
-.side_nav li a { display: block; width: 10px; height: 10px; margin: 0 auto; border: 2px solid #fff; background: #333; border-radius: 5px; }
+.side_nav li a { display: block; width: 10px; height: 10px; margin: 0 auto; border: 2px solid #333; background: transparent; border-radius: 5px; }
+
+.side_nav .on { background: #333; }
+
 
 /* 1페이지 VISUAL TITLE */
 #visualPage { position: relative; width: 100%; height: 100%; background-color: #333; }
@@ -77,12 +80,14 @@
     #aboutPage .rightBox { width: 100%; }
 
     #skills .skillList .bar_bg { width: 100%; }
-
-    #visualPage .title_text { font-size: 80px; }
 }
 @media (max-width: 720px) {
+    #visualPage .title_text { font-size: 60px; }
+
     .galleryList li { margin-right: 0; width: 100%; clear: both; }
     .galleryList li .ga_img img { height: 300px; }
+
+    .side_nav { top: inherit; bottom: 20px; right: 10px; }
 }
 
 /* 경기도청 */
